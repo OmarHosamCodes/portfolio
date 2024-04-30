@@ -1,0 +1,28 @@
+.title {
+  color: #f0f0f0;
+  font-size: x-large;
+}
+.underlinedTitle {
+  color: #f0f0f0;
+  font-size: x-large;
+  text-decoration: underline #cfa7ff 3px;
+}
+
+.gradientTitle {
+  font-size: x-large;
+  background-image: linear-gradient(to right, #cfa7ff, #9d80cb);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: large;
+  }
+  .underlinedTitle {
+    font-size: large;
+  }
+  .gradientTitle {
+    font-size: large;
+  }
+}

@@ -1,0 +1,8 @@
+.projects {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 60vw;
+}
