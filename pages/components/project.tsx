@@ -1,15 +1,16 @@
 import { IconType } from "react-icons";
 import styles from "./project.module.css";
-import Image from "next/image";
+import { useRouter } from "next/navigation";
 interface ProjectProps {
+  id: string;
   title: string;
   description: string;
   technologies: IconType[];
   image: string;
-  link: string;
 }
 
 export default function Project(props: ProjectProps) {
+  const router = useRouter();
   return (
     <div
       className={styles.project}
@@ -24,7 +25,12 @@ export default function Project(props: ProjectProps) {
           <Technology key={index} className={styles.technology} />
         ))}
       </div>
-      <a href={props.link}>View project</a>
+      <a
+        onClick={() => router.push(`/project/${props.id}`)}
+        className={styles.viewProject}
+      >
+        View project
+      </a>
     </div>
   );
 }

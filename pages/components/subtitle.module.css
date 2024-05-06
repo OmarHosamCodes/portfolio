@@ -6,6 +6,10 @@
 @media (max-width: 768px) {
   .subtitle {
     font-size: 9px;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -15,6 +19,12 @@
 }
 
 @media (max-width: 768px) {
+  .subtitleContainer {
+    max-width: 50vw;
+  }
+}
+
+@media (max-width: 480px) {
   .subtitleContainer {
     max-width: 80vw;
   }

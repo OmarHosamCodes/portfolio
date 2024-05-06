@@ -26,3 +26,15 @@
     font-size: large;
   }
 }
+
+@media (max-width: 480px) {
+  .title {
+    font-size: medium;
+  }
+  .underlinedTitle {
+    font-size: medium;
+  }
+  .gradientTitle {
+    font-size: medium;
+  }
+}

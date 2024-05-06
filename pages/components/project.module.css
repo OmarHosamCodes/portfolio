@@ -10,7 +10,7 @@
   box-shadow: 0 5px 12px #f0f0f04f;
   max-width: 50vw;
   width: 50vw;
-  height: 50vh;
+  height: 50%;
   /*  */
   background-size: 55%;
   background-position: bottom;
@@ -19,25 +19,6 @@
   backdrop-filter: blur(10px);
 
   transition: all 1s;
-}
-
-@media (max-width: 768px) {
-  .project {
-    max-width: 70vw;
-    width: 70vw;
-    height: 50vh;
-  }
-}
-
-@media (max-width: 480px) {
-  .project:hover {
-    background-size: 105%;
-
-    background-position: bottom;
-    background-repeat: no-repeat;
-
-    animation: fade 1s;
-  }
 }
 
 .project:hover {
@@ -95,4 +76,26 @@
   color: #0f0f0f;
   cursor: pointer;
   margin: 1rem;
+}
+@media (max-width: 768px) {
+  .project {
+    max-width: 50vw;
+    width: 50vw;
+    height: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .project:hover {
+    background-size: 200%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    animation: fade 1s;
+  }
+
+  .project {
+    max-width: 80vw;
+    width: 80vw;
+    height: 60%;
+  }
 }

@@ -12,7 +12,7 @@ import {
 } from "react-icons/tb";
 export default function Technologies() {
   return (
-    <div className={styles.technologies}>
+    <div className={styles.technologies} id="technologies">
       <Technology icon={TbBrandNextjs} />
       <Technology icon={TbBrandFlutter} />
       <Technology icon={TbBrandReact} />
