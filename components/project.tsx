@@ -1,3 +1,5 @@
+"use client";
+
 import { IconType } from "react-icons";
 import styles from "./project.module.css";
 import { useRouter } from "next/navigation";

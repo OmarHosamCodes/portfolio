@@ -1,7 +1,8 @@
+"use client";
 import { IconType } from "react-icons";
 import { FaGithub } from "react-icons/fa";
 
-export class ProjectImage {
+class ProjectImage {
   readonly url: string;
   readonly description: string;
 
@@ -11,7 +12,7 @@ export class ProjectImage {
   }
 }
 
-export class Project {
+class ProjectModel {
   readonly id: string;
   readonly name: string;
   readonly description: string;
@@ -35,8 +36,8 @@ export class Project {
     this.technologies = technologies;
   }
 
-  static projects: Project[] = [
-    new Project(
+  static projects: ProjectModel[] = [
+    new ProjectModel(
       "project1",
       "Project 1",
       "This is the first project",
@@ -60,5 +61,7 @@ export class Project {
     ),
   ];
 
-  static empty = new Project("", "", "", [], "", []);
+  static empty = new ProjectModel("", "", "", [], "", []);
 }
+
+export default ProjectModel;

@@ -1,0 +1,33 @@
+.imageContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+  margin: 10px;
+}
+
+.imageContainer:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.description {
+  font-size: 0.85rem;
+  max-width: 200px;
+}
+
+@media (max-width: 480px) {
+  .imageContainer {
+    flex-direction: column;
+  }
+
+  .imageContainer:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .image {
+    width: calc(345px / 1.7);
+    height: calc(700px / 1.7);
+  }
+}

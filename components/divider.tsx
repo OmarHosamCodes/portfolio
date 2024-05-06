@@ -1,5 +1,3 @@
-import React from "react";
-
 interface DividerProps {
   width: string;
   thickness: number;

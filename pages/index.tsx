@@ -1,16 +1,16 @@
 import styles from "@/styles/Home.module.css";
-import Title from "./components/title";
-import Socials from "./components/socials";
-import Subtitle from "./components/subtitle";
-import Divider from "./components/divider";
-import Projects from "./components/projects";
-import Technologies from "./components/technologies";
-import FloatingIsland from "./components/floatingIsland";
-import Mail from "./components/mail";
-import { useEffect } from "react";
+import Title from "../components/title";
+import Socials from "../components/socials";
+import Subtitle from "../components/subtitle";
+import Divider from "../components/divider";
+import Projects from "../components/projects";
+import Technologies from "../components/technologies";
+import FloatingIsland from "../components/floatingIsland";
+import Mail from "../components/mail";
 import emailjs from "@emailjs/browser";
+import dynamic from "next/dynamic";
 // #CFA7FF
-export default function Home() {
+function Home() {
   emailjs.init({
     publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
     blockHeadless: true,
@@ -39,3 +39,9 @@ export default function Home() {
     </main>
   );
 }
+
+const NoSSRHome = dynamic(() => Promise.resolve(Home), {
+  ssr: false,
+});
+
+export default NoSSRHome;

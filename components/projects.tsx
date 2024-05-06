@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./projects.module.css";
 import Project from "./project";
 import { FaGithub } from "react-icons/fa";

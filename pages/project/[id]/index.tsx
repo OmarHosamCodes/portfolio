@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
-import { Project as ProjectModel } from "../model";
 import { useRouter } from "next/router";
-import styles from "../index.module.css";
+import styles from "./index.module.css";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { useEffect, useState } from "react";
-
-export default function Project() {
+import ProjectModel from "../../../models/projectModel";
+import ProjectImage from "../../../projectComponents/projectImage";
+import dynamic from "next/dynamic";
+function Project() {
   const router = useRouter();
   const id = router.query.id as string;
   const imagesID = "images";
@@ -26,7 +27,7 @@ export default function Project() {
   }
 
   // Create a MediaQueryList object
-  var x = window.matchMedia("(max-width: 480px)");
+  var x: MediaQueryList = window.matchMedia("(max-width: 480px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,7 +49,6 @@ export default function Project() {
       });
     };
   }, [isScrollStart, x]);
-
   let project: ProjectModel | undefined = ProjectModel.projects.find(
     (project) => project.id === id
   );
@@ -118,26 +118,6 @@ export default function Project() {
   );
 }
 
-function ProjectImage({
-  url,
-  description,
-  index,
-}: {
-  url: string;
-  description: string;
-  index: number;
-}) {
-  return (
-    <div className={styles.imageContainer}>
-      <Image
-        className={styles.image}
-        src={url}
-        width={345 / 1.5}
-        height={700 / 1.5}
-        alt={""}
-      />
+const NoSSRProject = dynamic(() => Promise.resolve(Project), { ssr: false });
 
-      <p className={styles.description}>{description}</p>
-    </div>
-  );
-}
+export default NoSSRProject;
