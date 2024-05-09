@@ -11,7 +11,10 @@
 .imageContainer:nth-child(even) {
   flex-direction: row-reverse;
 }
-
+.image {
+  border-radius: 10px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
 .description {
   font-size: 0.85rem;
   max-width: 200px;

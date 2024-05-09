@@ -1,3 +1,4 @@
+"use client";
 import styles from "@/styles/Home.module.css";
 import Title from "../components/title";
 import Socials from "../components/socials";
@@ -9,8 +10,14 @@ import FloatingIsland from "../components/floatingIsland";
 import Mail from "../components/mail";
 import emailjs from "@emailjs/browser";
 import dynamic from "next/dynamic";
+import React, { useEffect, useState } from "react";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import Splash from "@/splash/splash";
 // #CFA7FF
 function Home() {
+  const [isScrollStart, setScrollStart] = useState(false);
+  const [loading, setLoading] = useState(true);
+
   emailjs.init({
     publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
     blockHeadless: true,
@@ -23,16 +30,51 @@ function Home() {
     },
   });
 
+  const handleLoading = () => {
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrollStart(true);
+      } else {
+        setScrollStart(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    // Attach listener function on state changes
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isScrollStart]);
+
+  if (loading) {
+    return <Splash loading={loading} handleLoading={handleLoading} />;
+  }
+
   return (
     <main className={styles.main}>
-      <FloatingIsland />
-      <Title />
-      <Socials />
-      <Subtitle />
-      <Divider width={"50vw"} thickness={1} />
+      <div className={styles.coloredBlurredBubble}></div>
+      {isScrollStart && <FloatingIsland />}
+      <div className={styles.coloredBubble}></div>
+      <div className={styles.container}>
+        <Title />
+        <Socials />
+        <Subtitle />
+        <MdKeyboardArrowDown
+          className={styles.arrow}
+          onClick={() => {
+            const el = document.getElementById("projects");
+            if (el) {
+              el.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        />
+      </div>
       <Projects />
       <Divider width={"50vw"} thickness={1} />
-
       <Technologies />
       <Divider width={"50vw"} thickness={1} />
       <Mail />

@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 * {
-  /* margin: 0 !important; */
-  /* padding: 0 !important; */
-
-  /* background-color: #0f0f0f; */
   font-family: "Russo One", sans-serif;
   font-weight: 400;
   margin-bottom: 0.5rem;
@@ -11,8 +7,6 @@
   scrollbar-width: thin;
   scrollbar-gutter: 0.5rem;
   scrollbar-color: #f0f0f0 #0f0f0f;
-
-  /* width: 100vw; */
 }
 
 body {
@@ -20,5 +14,4 @@ body {
   color: #f0f0f0;
   margin: 0 !important;
   margin-top: 30px !important;
-  /* max-width: 60vw; */
 }

@@ -1,11 +1,10 @@
 "use client";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from "./index.module.css";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { useEffect, useState } from "react";
 import ProjectModel from "../../../models/projectModel";
-import ProjectImage from "../../../projectComponents/projectImage";
+import ProjectImage from "../../../components/projectComponents/projectImage";
 import dynamic from "next/dynamic";
 function Project() {
   const router = useRouter();
