@@ -13,22 +13,28 @@ import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Splash from "@/splash/splash";
+
+//? TODO:
+//! 1. Add Data
+//! 2. Add Projects
+
 // #CFA7FF
+
 function Home() {
   const [isScrollStart, setScrollStart] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  emailjs.init({
-    publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-    blockHeadless: true,
+  useEffect(() => {
+    emailjs.init({
+      publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+      blockHeadless: true,
 
-    limitRate: {
-      // Set the limit rate for the application
-      id: "app",
-      // Allow 1 request per 10s
-      throttle: 1000,
-    },
-  });
+      limitRate: {
+        id: "app",
+        throttle: 1000,
+      },
+    });
+  }, []);
 
   const handleLoading = () => {
     setLoading(false);
@@ -43,8 +49,6 @@ function Home() {
       }
     };
     window.addEventListener("scroll", handleScroll);
-    // Attach listener function on state changes
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -56,7 +60,7 @@ function Home() {
 
   return (
     <main className={styles.main}>
-      <div className={styles.coloredBlurredBubble}></div>
+      <div className={styles.splash} />
       {isScrollStart && <FloatingIsland />}
       <div className={styles.coloredBubble}></div>
       <div className={styles.container}>

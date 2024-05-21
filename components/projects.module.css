@@ -1,12 +1,28 @@
 .projects {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   align-self: center;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: center;
   max-width: 50vw;
 }
-
+.splash {
+  background: #7300ff;
+  border-radius: 50%;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  transform: translateY(100vh);
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  filter: blur(500px);
+  animation: goDownAndUp 1s infinite;
+}
 @media (max-width: 480px) {
   .projects {
     max-width: 80vw;

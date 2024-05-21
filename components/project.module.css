@@ -3,35 +3,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin: 1rem; */
   padding: 1rem;
   border: 1px solid #f0f0f0;
   border-radius: 10px;
   box-shadow: 0 5px 12px #f0f0f04f;
   max-width: 50vw;
-  width: 50vw;
-  height: 50%;
-  /*  */
-  background-size: 55%;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-color: #9d80cb3b;
-  backdrop-filter: blur(10px);
-
-  transition: all 1s;
+  width: 25vw;
+  height: auto;
+  aspect-ratio: 1/1;
 }
 
 .project:hover {
   background-size: 105%;
-  background-position: center;
-  background-repeat: no-repeat;
   animation: fade 1s;
 }
 
 .project h3 {
   color: #f0f0f0;
   background-color: transparent;
-  margin: 1rem -1rem 1rem -1rem;
 }
 
 .project p {
@@ -42,9 +31,10 @@
 .project a {
   color: #f0f0f0;
   background-color: #9d80cb3b;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 10px;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.5s;
 }
 
@@ -57,45 +47,44 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
-  padding: 1rem;
+  flex-wrap: wrap;
+
   background-color: transparent;
 }
 
 .technology {
   width: 25px;
   height: 25px;
-  margin: 0.5rem;
   padding: 0.5rem;
   color: #f0f0f0;
-  transition: all 0.5s;
   background-color: transparent;
 }
 
 .technology:hover {
-  color: #0f0f0f;
   cursor: pointer;
-  margin: 1rem;
 }
 @media (max-width: 768px) {
   .project {
     max-width: 50vw;
-    width: 50vw;
-    height: 50%;
+  }
+  .technology {
+    width: 20px;
+    height: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .project:hover {
-    background-size: 200%;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    animation: fade 1s;
-  }
-
   .project {
     max-width: 80vw;
-    width: 80vw;
-    height: 60%;
+    aspect-ratio: 2/3;
+  }
+  .technology {
+    width: 15px;
+    height: 15px;
+  }
+
+  .project a {
+    border-radius: 5px;
+    font-size: small;
   }
 }

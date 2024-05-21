@@ -2,40 +2,48 @@
 
 import styles from "./projects.module.css";
 import Project from "./project";
-import { FaGithub } from "react-icons/fa";
+import {
+  SiFirebase,
+  SiFlutter,
+  SiGithub,
+  SiGnometerminal,
+  SiPython,
+  SiReact,
+} from "react-icons/si";
+
+import { MdHive } from "react-icons/md";
+import { TbApi, TbBrandNextjs } from "react-icons/tb";
+import { BsDatabase } from "react-icons/bs";
 
 export default function Projects() {
   return (
     <div className={styles.projects} id="projects">
+      <div className={styles.splash} />
       <Project
-        id="project1"
-        image="https://i.ibb.co/y0FZgcG/Quantum-Muscle.png"
-        title="Project 1"
-        description="This is the first project."
-        technologies={[FaGithub, FaGithub, FaGithub]}
+        id="Quantum-Muscle"
+        title="Quantum Muscle"
+        description="New Age Of Fitness"
+        technologies={[SiFlutter, SiFirebase, MdHive]}
       />
       <Project
-        id="project2"
-        image="https://i.ibb.co/y01VfrV/Mockup.png"
-        title="Project 2"
-        description="This is the second project."
-        technologies={[FaGithub, FaGithub, FaGithub]}
-      />
-
-      <Project
-        id="project3"
-        image="https://i.ibb.co/y01VfrV/Mockup.png"
-        title="Project 3"
-        description="This is the third project."
-        technologies={[FaGithub, FaGithub, FaGithub]}
+        id="Odin-Wear"
+        title="Odin Wear"
+        description="Great UI For Great Fashion"
+        technologies={[SiReact, SiFirebase, TbBrandNextjs]}
       />
 
       <Project
-        id="project4"
-        image="https://i.ibb.co/y01VfrV/Mockup.png"
-        title="Project 4"
-        description="This is the fourth project."
-        technologies={[FaGithub, FaGithub, FaGithub]}
+        id="Mastery-Bot"
+        title="Mastery Bot"
+        description="Clash Royal Helper ;)"
+        technologies={[SiPython, SiGnometerminal, SiGithub]}
+      />
+
+      <Project
+        id="Sportion"
+        title="Sportion"
+        description="For Healthy Lifestyle"
+        technologies={[SiFlutter, TbApi, BsDatabase]}
       />
     </div>
   );

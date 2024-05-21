@@ -53,7 +53,7 @@ function Project() {
   );
 
   const itemCount = project?.technologies.length!;
-  const angleIncrement = 270 / (itemCount - 1);
+  const angleIncrement = 320 / (itemCount - 1);
 
   if (!project) {
     return <div className={styles.notFound}>Project not found</div>;
@@ -61,6 +61,7 @@ function Project() {
 
   return (
     <div className={styles.layout}>
+      <div className={styles.splash} />
       <div className={styles.technologies}>
         {project!.technologies.map((Technology, index) => {
           const angle = index * angleIncrement;

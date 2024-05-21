@@ -27,16 +27,16 @@
   cursor: pointer;
   animation: goDownAndUp 1s infinite;
 }
-.coloredBlurredBubble {
+.splash {
   background: #7300ff;
   border-radius: 50%;
-  width: 30%;
-  height: 30%;
+  width: 40%;
+  height: 40%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-  filter: blur(250px);
+  filter: blur(500px);
   animation: goDownAndUp 1s infinite;
 }
 

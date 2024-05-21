@@ -8,18 +8,12 @@ interface ProjectProps {
   title: string;
   description: string;
   technologies: IconType[];
-  image: string;
 }
 
 export default function Project(props: ProjectProps) {
   const router = useRouter();
   return (
-    <div
-      className={styles.project}
-      style={{
-        backgroundImage: `url(${props.image})`,
-      }}
-    >
+    <div className={styles.project}>
       <h3>{props.title}</h3>
       <p>{props.description}</p>
       <div className={styles.technologies}>

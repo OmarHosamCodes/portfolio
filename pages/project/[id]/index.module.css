@@ -106,7 +106,36 @@
 
   filter: blur(0);
 }
-
+.splash {
+  background: #7300ff;
+  border-radius: 50%;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  transform: translateY(100vh);
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(500px);
+  animation: goDownAndUp 1s infinite;
+}
+.splash2 {
+  background: #7300ff;
+  border-radius: 50%;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  transform: translateY(100vh);
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(500px);
+  animation: goDownAndUp 1s infinite;
+}
 @keyframes goDownAndUp {
   0% {
     transform: translateY(0);

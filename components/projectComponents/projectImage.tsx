@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./projectImage.module.css";
 
-function ProjectImage({
+export default function ProjectImage({
   url,
   description,
   index,
@@ -24,5 +24,3 @@ function ProjectImage({
     </div>
   );
 }
-
-export default ProjectImage;
