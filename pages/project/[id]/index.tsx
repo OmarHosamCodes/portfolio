@@ -113,10 +113,19 @@ function Project() {
           }}
         />
       )}
+
+      <a
+        className={styles.footer}
+        href={project!.link}
+        target="_blank"
+        rel="noreferrer"
+      >
+        View Source Code
+      </a>
     </div>
   );
 }
 
- const NoSSRProject = dynamic(() => Promise.resolve(Project), { ssr: false });
+const NoSSRProject = dynamic(() => Promise.resolve(Project), { ssr: false });
 
 export default NoSSRProject;

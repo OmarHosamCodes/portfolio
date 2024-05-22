@@ -17,13 +17,13 @@ export default function Splash({
     function setup() {
       setTimeout(() => {
         progressBarRef.current!.style.width = "10%";
-      }, 500);
+      }, 100);
       setTimeout(() => {
         progressBarRef.current!.style.width = "100%";
-      }, 1000);
+      }, 750);
       setTimeout(() => {
         handleLoading();
-      }, 1500);
+      }, 1000);
     }
     setup();
   });

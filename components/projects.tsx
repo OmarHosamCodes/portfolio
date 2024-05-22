@@ -1,4 +1,3 @@
-
 import styles from "./projects.module.css";
 import Project from "./project";
 import {
@@ -39,10 +38,10 @@ export default function Projects() {
       />
 
       <Project
-        id="Sportion"
-        title="Sportion"
-        description="For Healthy Lifestyle"
-        technologies={[SiFlutter, TbApi, BsDatabase]}
+        id="SF-Scrapper"
+        title="Simply Fitness Scrapper"
+        description="Scrapes Website For Workouts"
+        technologies={[SiPython, TbApi, BsDatabase]}
       />
     </div>
   );
