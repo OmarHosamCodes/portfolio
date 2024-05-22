@@ -1,30 +1,25 @@
 .subtitle {
   color: #f0f0f0c4;
-  font-size: 11px;
-}
-
-@media (max-width: 768px) {
-  .subtitle {
-    font-size: 9px;
-    justify-self: center;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-  }
+  font-size: 12;
 }
 
 .subtitleContainer {
   max-width: 50vw;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 @media (max-width: 768px) {
   .subtitleContainer {
     max-width: 50vw;
   }
+  .subtitle {
+    font-size: 11px;
+  }
 }
-
 @media (max-width: 480px) {
+  .subtitle {
+    font-size: 10px;
+  }
   .subtitleContainer {
     max-width: 60vw;
   }

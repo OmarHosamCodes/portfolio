@@ -7,22 +7,11 @@
   border: 1px solid #f0f0f0;
   border-radius: 10px;
   box-shadow: 0 5px 12px #f0f0f04f;
-  max-width: 50vw;
-  width: 25vw;
-  height: auto;
-  aspect-ratio: 1/1;
+  width: 30vw;
+  height: fit-content;
 }
 
-.project:hover {
-  background-size: 105%;
-  animation: fade 1s;
-}
-
-.project h3 {
-  color: #f0f0f0;
-  background-color: transparent;
-}
-
+.project h3,
 .project p {
   color: #f0f0f0;
   background-color: transparent;
@@ -64,8 +53,9 @@
   cursor: pointer;
 }
 @media (max-width: 768px) {
-  .project {
-    max-width: 50vw;
+  .project p,
+  .project h3 {
+    text-align: center;
   }
   .technology {
     width: 20px;
@@ -75,16 +65,18 @@
 
 @media (max-width: 480px) {
   .project {
-    max-width: 80vw;
-    aspect-ratio: 2/3;
+    width: 70vw;
   }
-  .technology {
-    width: 15px;
-    height: 15px;
+  .project h3 {
+    font-size: 1;
+  }
+  .project p {
+    font-size: 0.9rem;
+    text-align: center;
   }
 
   .project a {
     border-radius: 5px;
-    font-size: small;
+    /* font-size: 60%; */
   }
 }

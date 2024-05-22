@@ -31,3 +31,12 @@
   margin-bottom: 0rem !important;
   font-size: 2vw;
 }
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 4vw;
+  }
+  .icon {
+    font-size: 4vw;
+  }
+}

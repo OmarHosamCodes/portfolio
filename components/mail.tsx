@@ -64,65 +64,9 @@ export default function Mail() {
 
           formRef.current.reset();
 
-          const body = `<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Email Template</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-           
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #0f0f0f;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-     
-        label {
-            color:#f0f0f0;
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-    
-    
-        button {
-            padding: 10px 20px;
-            background-color: #cfa7ff;
-            color: #f0f0f0f;
-font-weight:bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-      
-    </style>
-</head>
-<body>
-    <div class="container">
-       
- <label for="name">Name : ${name}</label>
-  <label for="email">Email : ${email}</label>
-<br><br>  
-<label for="message">${message}</label>
-<br><br>
-        <button >From Website</button>
-    </div>
-
-
-</body>
-</html>`;
-
-          const mailtoLink = `mailto:omarhosamcodes@gmail.comsubject=${encodeURIComponent(
-            name!
-          )}&body=${encodeURIComponent(body!)}`;
+          const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
+            `Message From ${name}`!
+          )}&body=${encodeURIComponent(message!)}`;
 
           window.location.href = mailtoLink;
         }}

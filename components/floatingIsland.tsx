@@ -1,4 +1,3 @@
-"use client";
 import { IconType } from "react-icons";
 import styles from "./floatingIsland.module.css";
 import {

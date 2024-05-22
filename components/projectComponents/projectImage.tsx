@@ -4,11 +4,10 @@ import styles from "./projectImage.module.css";
 export default function ProjectImage({
   url,
   description,
-  index,
+  
 }: {
   url: string;
   description: string;
-  index: number;
 }) {
   return (
     <div className={styles.imageContainer}>

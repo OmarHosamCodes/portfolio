@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./splash.module.css";
 import logo from "@/icons/Icon-192.png";
 import Image from "next/image";
@@ -18,7 +18,6 @@ export default function Splash({
       setTimeout(() => {
         progressBarRef.current!.style.width = "10%";
       }, 500);
-
       setTimeout(() => {
         progressBarRef.current!.style.width = "100%";
       }, 1000);

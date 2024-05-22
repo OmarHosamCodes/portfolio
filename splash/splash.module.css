@@ -16,7 +16,7 @@
   position: relative;
   width: 0%;
   height: 1rem;
-  background-color: #7300ff;
+  background-color: #cfa7ff;
   border-radius: 10px;
   overflow: hidden;
   behavior: smooth;
@@ -32,9 +32,8 @@
   max-width: 400px;
   min-width: 200px;
   overflow: hidden;
-
   height: 1rem;
-  background-color: #14002c;
+  background-color: #413450;
   border-radius: 10px;
 }
 

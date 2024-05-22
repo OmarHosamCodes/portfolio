@@ -98,7 +98,6 @@ function Project() {
             key={index}
             url={image.url}
             description={image.description}
-            index={index}
           />
         ))}
       </div>
@@ -118,6 +117,6 @@ function Project() {
   );
 }
 
-const NoSSRProject = dynamic(() => Promise.resolve(Project), { ssr: false });
+// const NoSSRProject = dynamic(() => Promise.resolve(Project), { ssr: false });
 
-export default NoSSRProject;
+export default Project;

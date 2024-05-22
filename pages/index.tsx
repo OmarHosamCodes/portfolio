@@ -8,9 +8,8 @@ import Projects from "../components/projects";
 import Technologies from "../components/technologies";
 import FloatingIsland from "../components/floatingIsland";
 import Mail from "../components/mail";
-import emailjs from "@emailjs/browser";
 import dynamic from "next/dynamic";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Splash from "@/splash/splash";
 
@@ -23,18 +22,6 @@ import Splash from "@/splash/splash";
 function Home() {
   const [isScrollStart, setScrollStart] = useState(false);
   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    emailjs.init({
-      publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-      blockHeadless: true,
-
-      limitRate: {
-        id: "app",
-        throttle: 1000,
-      },
-    });
-  }, []);
 
   const handleLoading = () => {
     setLoading(false);
@@ -86,8 +73,8 @@ function Home() {
   );
 }
 
-const NoSSRHome = dynamic(() => Promise.resolve(Home), {
-  ssr: false,
-});
+// const NoSSRHome = dynamic(() => Promise.resolve(Home), {
+//   ssr: false,
+// });
 
-export default NoSSRHome;
+export default Home;
