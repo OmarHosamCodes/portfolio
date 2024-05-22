@@ -117,6 +117,6 @@ function Project() {
   );
 }
 
-// const NoSSRProject = dynamic(() => Promise.resolve(Project), { ssr: false });
+ const NoSSRProject = dynamic(() => Promise.resolve(Project), { ssr: false });
 
-export default Project;
+export default NoSSRProject;
