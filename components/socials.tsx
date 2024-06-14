@@ -6,9 +6,16 @@ import { BsLinkedin } from "react-icons/bs";
 export default function Socials() {
   return (
     <div className={styles.row}>
-      <SocialButton name="GitHub" icon={FaGithub} />
-      <SocialButton name="Linkedin" icon={BsLinkedin} />
-      {/* <SocialButton name="" icon={FaGithub} /> */}
+      <SocialButton
+        name="GitHub"
+        icon={FaGithub}
+        link="https://github.com/OmarHosamCodes/"
+      />
+      <SocialButton
+        name="Linkedin"
+        icon={BsLinkedin}
+        link="https://www.linkedin.com/in/omarhosamcodes/"
+      />
     </div>
   );
 }
